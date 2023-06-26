@@ -70,3 +70,8 @@ export async function funcCreateAttachmentPresignedUrl(
   todosAccess.funcUpdateTodoAttachmentUrl(userId, todoId)
   return attachmentUtils.funcGetUploadUrl(todoId)
 }
+
+// Search Todo function
+export async function funcSearchTodo(key: string, userId: string) {
+  return await todosAccess.funcSearchItem(key, userId)
+}
